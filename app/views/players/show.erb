@@ -1,0 +1,9 @@
+<h1><%= @player.name %> Player Page</h1>
+
+Age: <%= @player.age %><br>
+Team: <%= @player.team %><br>
+Jersey #: <%= @player.jersey %><br>
+
+<% @player.boxscores.each do |boxscore| %>
+  Boxscore: <%= link_to "#{boxscore.game.opponent} - #{boxscore.game.readable_datetime}", boxscore  %><br>
+<% end %>

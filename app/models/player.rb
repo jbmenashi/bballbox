@@ -1,4 +1,4 @@
 class Player < ApplicationRecord
-  has_many :boxes
-  has_many :players, through: :boxes
+  has_many :boxscores
+  has_many :players, through: :boxscores
 end
