@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 2018_11_28_205333) do
   create_table "games", force: :cascade do |t|
     t.datetime "date"
     t.string "opponent"
-    t.boolean "home?"
+    t.boolean "home"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

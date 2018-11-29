@@ -3,7 +3,7 @@ class CreateGames < ActiveRecord::Migration[5.2]
     create_table :games do |t|
       t.datetime :date
       t.string :opponent
-      t.boolean :home?
+      t.boolean :home
 
       t.timestamps
     end
