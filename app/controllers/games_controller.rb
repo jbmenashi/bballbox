@@ -18,6 +18,7 @@ class GamesController < ApplicationController
     if @game.save
       redirect_to @game
     else
+      flash[:errors] = @game.errors.full_messages
       redirect_to new_game_path
     end
   end

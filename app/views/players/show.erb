@@ -7,3 +7,8 @@ Jersey #: <%= @player.jersey %><br>
 <% @player.boxscores.each do |boxscore| %>
   Boxscore: <%= link_to boxscore.game_info(boxscore.game), boxscore  %><br>
 <% end %>
+
+
+<%= form_for @player do |f| %>
+  <%= button_to "Delete Player?", @player, :method => :delete %>
+<% end %>
