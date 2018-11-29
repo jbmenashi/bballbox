@@ -31,6 +31,7 @@ class GamesController < ApplicationController
     if @game.update(game_params)
       redirect_to @game
     else
+      flash[:errors] = @game.errors.full_messages
       redirect_to edit_game_path
     end
   end

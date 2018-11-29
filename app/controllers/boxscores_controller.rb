@@ -20,6 +20,7 @@ class BoxscoresController < ApplicationController
     if @boxscore.save
       redirect_to @boxscore
     else
+      flash[:errors] = @boxscore.errors.full_messages
       redirect_to new_boxscore_path
     end
   end
@@ -32,6 +33,7 @@ class BoxscoresController < ApplicationController
     if @boxscore.update(boxscore_params)
       redirect_to @boxscore
     else
+      flash[:errors] = @boxscore.errors.full_messages
       redirect_to edit_boxscore_path
     end
   end
