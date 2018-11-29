@@ -18,6 +18,7 @@ class PlayersController < ApplicationController
     if @player.save
       redirect_to @player
     else
+      flash[:errors] = @player.errors.full_messages
       redirect_to new_player_path
     end
   end
@@ -30,6 +31,7 @@ class PlayersController < ApplicationController
     if @player.update(player_params)
       redirect_to @player
     else
+      flash[:errors] = @player.errors.full_messages
       redirect_to edit_player_path
     end
   end
