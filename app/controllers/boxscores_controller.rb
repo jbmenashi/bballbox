@@ -11,6 +11,8 @@ class BoxscoresController < ApplicationController
 
   def new
     @boxscore = Boxscore.new
+    @players = Player.all
+    @games = Game.all
   end
 
   def create

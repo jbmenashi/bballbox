@@ -5,5 +5,9 @@ class Game < ApplicationRecord
   def readable_datetime
     "#{self.date.strftime('%B %d, %Y')}"
   end
-  
+
+  def game_info
+    "#{self.opponent} - #{self.readable_datetime}"
+  end
+
 end

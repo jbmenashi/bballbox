@@ -2,6 +2,6 @@
 
 <ul>
   <% @games.each do |game| %>
-    <%= link_to "#{game.opponent} - #{game.readable_datetime}", game %><br>
+    <%= link_to game.game_info, game %><br>
   <% end %>
 </ul>

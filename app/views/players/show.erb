@@ -5,5 +5,5 @@ Team: <%= @player.team %><br>
 Jersey #: <%= @player.jersey %><br>
 
 <% @player.boxscores.each do |boxscore| %>
-  Boxscore: <%= link_to "#{boxscore.game.opponent} - #{boxscore.game.readable_datetime}", boxscore  %><br>
+  Boxscore: <%= link_to boxscore.game_info(boxscore.game), boxscore  %><br>
 <% end %>
