@@ -7,15 +7,11 @@ class Player < ApplicationRecord
   validates :jersey, presence: true, numericality: { only_integer: true }
   validate :unique_jersey
 
-
-  # if a player has the same team, they can't have the same jersey number
-
   def unique_jersey
     other_player = Player.find_by(team: self.team, jersey: self.jersey)
     if other_player
       errors.add(:jersey, "cannot have same jersey number as teammate")
     end
   end
-
 
 end
