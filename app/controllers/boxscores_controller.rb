@@ -40,7 +40,7 @@ class BoxscoresController < ApplicationController
 
   def destroy
     @boxscore.destroy
-    redirect_to boxscores_path
+    redirect_to new_boxscore_path
   end
 
   private
